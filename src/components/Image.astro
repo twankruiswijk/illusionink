@@ -1,0 +1,17 @@
+---
+import { Image as AstroImage } from 'astro:assets';
+
+const { source, alt } = Astro.props;
+---
+
+<a href={source.src} class="block relative animate-wiggle gallery">
+  <AstroImage
+    src={source}
+    alt={alt}
+    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-xl"
+  />
+  <div
+    class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-800/50"
+  >
+  </div>
+</a>

@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Image from '../components/Image.astro';
+
+import iris from '../assets/iris.jpg';
+import tattoo1 from '../assets/tattoo_1.jpeg';
+import tattoo2 from '../assets/tattoo_2.jpeg';
+import tattoo3 from '../assets/tattoo_3.jpeg';
+import tattoo4 from '../assets/tattoo_4.jpeg';
+import tattoo5 from '../assets/tattoo_5.jpeg';
+
+import 'glightbox/dist/css/glightbox.min.css';
+---
+
+<script>
+  // @ts-ignore
+  import GLightbox from 'glightbox/dist/js/glightbox.min.js';
+
+  const lightbox = GLightbox({
+    selector: '.gallery',
+  });
+</script>
+
+<Layout title="Iris Hamer Ink.">
+  <main class="bg-black h-full flex items-center justify-center">
+    <div class="relative isolate w-full">
+      <svg
+        class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-900 [mask-image:radial-gradient(36rem_36rem_at_center,white,transparent)]"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
+            width="200"
+            height="200"
+            x="50%"
+            y="-1"
+            patternUnits="userSpaceOnUse"
+          >
+            <path d="M.5 200V.5H200" fill="none"></path>
+          </pattern>
+        </defs>
+
+        <rect
+          width="100%"
+          height="100%"
+          stroke-width="0"
+          fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"></rect>
+      </svg>
+      <div
+        class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"
+        >
+        </div>
+      </div>
+      <div class="overflow-hidden w-full">
+        <div class="mx-auto max-w-7xl px-6 pb-32 pt-24 lg:px-8 lg:pt-32">
+          <div
+            class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
+          >
+            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <div class="pb-8">
+                <img
+                  src={iris.src}
+                  alt="Irish Hamer"
+                  class="w-36 h-36 rounded-full object-cover border-2"
+                />
+              </div>
+
+              <h1
+                class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+              >
+                illusion ink.
+              </h1>
+              <p
+                class="mt-6 text-lg leading-8 text-slate-100 sm:max-w-md lg:max-w-none"
+              >
+                Tattoos symboliseren voor ons de ultieme zelfexpressie. Ze zijn
+                een manier om te zeggen: "Dit is mijn lichaam, en ik bepaal wat
+                ik ermee doe." Het vereeuwigen van een verhaal is mooi, maar er
+                hoeft niet altijd een diepere betekenis te zijn. Soms is de
+                expressie zelf al genoeg. Elk detail hoeft niet te worden
+                uitgedacht; wij genieten van het creatieve samenspel met jou,
+                waarin jij aangeeft wat je mooi vindt, en wij onze creativiteit
+                in jouw tattoo kan verweven.
+              </p>
+
+              <p
+                class="mt-6 text-lg leading-8 text-white sm:max-w-md lg:max-w-none"
+              >
+                Klik op de onderstaande link en plan vrijblijvend een gesprek in
+                over al jouw tattooideeën!
+              </p>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-6">
+                <a
+                  href="https://irishamer-dot-ink.salonized.com/widget_bookings/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-md bg-white px-6 py-3 text-md font-semibold text-black shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >Plan een gesprek</a
+                >
+                <a
+                  href="https://www.instagram.com/irishamer.ink/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm font-semibold leading-6 text-white"
+                >
+                  Bekijk meer van ons werk <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+            <div
+              class="mt-12 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
+            >
+              <div
+                class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
+              >
+                <Image source={tattoo1} alt="tattoo of old smoking man" />
+              </div>
+              <div
+                class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
+              >
+                <Image source={tattoo2} alt="tattoo of red panda" />
+                <Image source={tattoo3} alt="Realism tattoo" />
+              </div>
+              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                <Image source={tattoo4} alt="tattoo design" />
+                <Image source={tattoo5} alt="tattoo design" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Image from '../components/Image.astro';
 
-import iris from '../assets/iris.jpg';
+import logo from '../assets/logo.svg';
 import tattoo1 from '../assets/tattoo_1.jpeg';
 import tattoo2 from '../assets/tattoo_2.jpeg';
 import tattoo3 from '../assets/tattoo_3.jpeg';
@@ -65,9 +65,9 @@ import 'glightbox/dist/css/glightbox.min.css';
             <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
               <div class="pb-8">
                 <img
-                  src={iris['src']}
-                  alt="Irish Hamer"
-                  class="w-36 h-36 rounded-full object-cover border-2"
+                  src={logo['src']}
+                  alt="Illusion ink logo"
+                  class="w-28"
                 />
               </div>
 
@@ -76,6 +76,9 @@ import 'glightbox/dist/css/glightbox.min.css';
               >
                 illusion ink.
               </h1>
+
+              <p class="mt-2 text-lg italic leading-8 text-slate-100 sm:max-w-md lg:max-w-none">Artists: <a class="underline" target="_blank" href="https://www.instagram.com/irishamer.ink/">Iris Hamer</a>, <a class="underline" target="_blank" href="https://www.instagram.com/foxyroxyink/">Roxanne Hartog</a></p>
+
               <p
                 class="mt-6 text-lg leading-8 text-slate-100 sm:max-w-md lg:max-w-none"
               >
@@ -104,7 +107,7 @@ import 'glightbox/dist/css/glightbox.min.css';
                   >Plan een gesprek</a
                 >
                 <a
-                  href="https://www.instagram.com/irishamer.ink/"
+                  href="https://www.instagram.com/illusion.ink_studio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-sm font-semibold leading-6 text-white"

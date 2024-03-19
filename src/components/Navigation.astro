@@ -124,6 +124,11 @@ const links = [
   function handleClick() {
     const menu = document.getElementById('menu');
 
+    if (!menu) {
+      console.error('Menu not found');
+      return;
+    }
+
     if (menu.style.display === 'block') {
       menu.style.display = 'none';
     } else {

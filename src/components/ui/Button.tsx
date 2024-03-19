@@ -1,9 +1,8 @@
-import { type ReactNode } from 'react';
+import { type PropsWithChildren } from 'react';
 
 interface BaseButtonProps {
-  children: ReactNode;
-  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  color: 'primary' | 'secondary';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary';
   type?: 'button' | 'submit' | 'reset';
 }
 
@@ -27,7 +26,6 @@ const sizeClasses = {
   xl: 'text-sm px-5 py-3.5',
 } as const;
 
-// fill: linear-gradient(270deg, #FEDEBE 0.33%, #B58F6A 44.35%, #963 98.15%);
 const colorClasses = {
   primary: 'bg-white text-black hover:bg-gray-100',
   secondary: 'bg-gray-500 text-white',
@@ -40,7 +38,7 @@ export function Button({
   size = 'md',
   color = 'primary',
   type = 'button',
-}: ButtonProps) {
+}: PropsWithChildren<ButtonProps>) {
   const classes = `inline-flex items-center justify-center font-semibold rounded-md transition-all duration-300 ease-in-out ${sizeClasses[size]} ${colorClasses[color]}`;
 
   if (href) {

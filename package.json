@@ -15,6 +15,7 @@
 		"check:fix": "astro check && biome check --write ."
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^12.6.12",
 		"@astrojs/react": "^4.4.2",
 		"@radix-ui/react-accordion": "^1.2.12",
 		"@radix-ui/react-dialog": "^1.1.15",

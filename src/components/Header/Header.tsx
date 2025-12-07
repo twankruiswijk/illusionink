@@ -1,8 +1,8 @@
+import type { ComponentProps } from 'react';
 import { NavigationDesktop } from '@/components/Header/NavigationDesktop/NavigationDesktop.tsx';
 import { NavigationMobile } from '@/components/Header/NavigationMobile/NavigationMobile.tsx';
 import { ModeToggle } from '@/components/ModeToggle/ModeToggle.tsx';
 import { Button } from '@/components/ui/Button/Button.tsx';
-import type { ComponentProps } from 'react';
 
 export type NavigationSubItem = {
 	label: string;
